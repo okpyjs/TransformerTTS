@@ -27,8 +27,11 @@ pip install -r TransformerTTS/requirements.txt
 ## Usage
 - Add following code to your script
 ```python
-from TransformerTTS.data.audio import Audio
-from TransformerTTS.model.factory import tts_ljspeech
+import sys
+sys.path.append('TransformerTTS')
+
+from data.audio import Audio
+from model.factory import tts_ljspeech
 model = tts_ljspeech()
 audio = Audio.from_config(model.config)
 out = model.predict('Please, say something.')
