@@ -36,3 +36,11 @@ out = model.predict('Please, say something.')
 # Convert spectrogram to wav (with griffin lim)
 wav = audio.reconstruct_waveform(out['mel'].numpy().T)
 ```
+
+## Use pre-trained model from command line with
+```bash
+cd TransformerTTS
+```
+```bash
+python predict_tts.py -t "Please, say something."
+```
